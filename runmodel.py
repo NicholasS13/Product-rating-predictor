@@ -36,20 +36,20 @@ with open("review.txt", encoding="utf-8") as f:
 		print(line)
 		print(encode)
 		# predict from 0-1 negative-positive
-		print(predict[0])
+		#print(predict[0])
 		prediction = predict[0]
 
 		if prediction < .21:
-			print("With the given reviews, the model thinks that the product will be rated 1 star")
+			print("With the given reviews, the model thinks that the text writer thinks the topic is poorly (1 star)")
 
 		elif prediction < .41:
-			print("With the given reviews, the model thinks that the product will be rated 2 stars")
+			print("With the given reviews, the model thinks that the text writer thinks the topic is bad (2 stars)")
 		
 		elif prediction < .61:
-			print("With the given reviews, the model thinks that the product will be rated 3 stars")
+			print("With the given reviews, the model thinks that the text writer thinks the topic is ok (3 stars)")
 		
 		elif prediction < .81:
-			print("With the given reviews, the model thinks that the product will be rated 4 stars")
+			print("With the given reviews, the model thinks that the text writer thinks the topic is good (4 stars)")
 		
 		else:
-			print("With the given reviews, the model thinks that the product will be rated 5 stars")
+			print("With the given reviews, the model thinks that the text writer thinks the topic is perfect (5 stars)")
