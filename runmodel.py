@@ -26,7 +26,7 @@ def review_encode(s):
 	return encoded
 
 model = keras.models.load_model("model.h5")
-
+input("Please make sure your review is in review.txt in this dirrectory. That is the textfile used for the predictuion (Type any key and press enter to aknowledge)")
 with open("review.txt", encoding="utf-8") as f:
 	for line in f.readlines():
 		nline = line.replace(",", "").replace(".", "").replace("(", "").replace(")", "").replace(":", "").replace("\"","").strip().split(" ")
